@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 import time
 from bh1745 import BH1745
+import dot3k.lcd as lcd
+
+
+print("""
+This example shows a basic "Hello World" on the LCD.
+You should see "Hello World" displayed on your LCD!
+Press CTRL+C to exit.
+""")
 
 bh1745 = BH1745()
 
@@ -13,6 +21,9 @@ try:
     while True:
         r, g, b, c = bh1745.get_rgbc_raw()
         print('RGBC: {:10.1f} {:10.1f} {:10.1f} {:10.1f}'.format(r, g, b, c))
+        # Clear the LCD and display Hello World
+        lcd.clear()
+        lcd.write('{:10.1f}'.format(c))
         time.sleep(0.5)
 
 except KeyboardInterrupt:
