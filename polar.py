@@ -24,7 +24,7 @@ try:
         # Clear the LCD and display Hello World
         lcd.clear()
         lcd.write('{:10.1f}'.format(c))
-        time.sleep(0.5)
+        time.sleep(0.1)
 
 except KeyboardInterrupt:
     bh1745.set_leds(0)
