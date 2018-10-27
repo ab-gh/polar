@@ -23,7 +23,7 @@ try:
         print('RGBC: {:10.1f} {:10.1f} {:10.1f} {:10.1f}'.format(r, g, b, c))
         # Clear the LCD and display Hello World
         lcd.clear()
-        lcd.write('{:10.1f} {:10.1f} {:10.1f} {:10.1f}'.format(r, g, b, c))
+        lcd.write('{:10.1f}'.format(c))
         time.sleep(0.5)
 
 except KeyboardInterrupt:
